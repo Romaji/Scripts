@@ -6,7 +6,7 @@ Eggs = {}
 for i,v in pairs(game:GetService("Workspace").Gloves:GetChildren()) do
     table.insert(Eggs,v.Name)
 end
-Section:NewDropdown("Collect Glove", "DropdownInf", {"1", "2", "3","4","5","6","7"}, function(currentOption)
+Section:NewDropdown("Collect Glove", "DropdownInf", {"1", "2", "3" ,"4" ,"5" ,"6" }, function(currentOption)
     hnumber = currentOption
 end)
 Section:NewDropdown("Select Glove", "DropdownInf", Eggs, function(currentOption)
@@ -19,7 +19,7 @@ while _G.x do wait(1)
 for i,v in pairs(game:GetService("Workspace").Gloves:GetChildren()) do
     if v.Name == Glovese then
         if game:GetService("Players").LocalPlayer.PlayerGui.MainUI.EquippedGlove.Visible == true then
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(55,0,0)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(70,0,0)
 wait(.1)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space", false, game)
 wait(.1)
