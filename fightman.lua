@@ -19,7 +19,7 @@ while _G.x do wait(1)
 for i,v in pairs(game:GetService("Workspace").Gloves:GetChildren()) do
     if v.Name == Glovese then
         if game:GetService("Players").LocalPlayer.PlayerGui.MainUI.EquippedGlove.Visible == true then
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(70,0,0)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(90,0,0)
 wait(.1)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space", false, game)
 wait(.1)
