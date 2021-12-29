@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Fightman Simulator! Made By NAYPRAMX#0562", "BloodTheme")
+local Window = Library.CreateLib("Fightman Simulator! Made By NAYPRAMX#0562", "Ocean")
 local Tab = Window:NewTab("Auto-Farm")
 local Section = Tab:NewSection("AutoFarm")
 Eggs = {}
