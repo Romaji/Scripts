@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Fightman Simulator! Made By NAYPRAMX#0562", "Ocean")
+local Window = Library.CreateLib("Fightman Simulator! Made By NAYPRAMX#0562 Modify by Yosi#8999", "Ocean")
 local Tab = Window:NewTab("Auto-Farm")
 local Section = Tab:NewSection("AutoFarm")
 Eggs = {}
@@ -12,14 +12,14 @@ end)
 Section:NewDropdown("Select Glove", "DropdownInf", Eggs, function(currentOption)
     Glovese = currentOption
 end)
-Section:NewToggle("Auto-Farm Gloves", "ToggleInfo", function(state)
+Section:NewToggle("AutoFarm Gloves", "ToggleInfo", function(state)
     _G.x = state
     
 while _G.x do wait(1)
 for i,v in pairs(game:GetService("Workspace").Gloves:GetChildren()) do
     if v.Name == Glovese then
         if game:GetService("Players").LocalPlayer.PlayerGui.MainUI.EquippedGlove.Visible == true then
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(90,0,0)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.UIAnchor.CFrame * CFrame.new(60,0,0)
 wait(.1)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space", false, game)
 wait(.1)
@@ -35,6 +35,31 @@ end
 end
 end
 end)
+
+Section:NewToggle("AutoFarm Gloves Long Range", "ToggleInfo", function(state)
+    _G.GloveOther = state
+    
+while _G.GloveOther do wait(1)
+for glove,glovevalue in pairs(game:GetService("Workspace").Gloves:GetChildren()) do
+    if glovevalue.Name == Glovese then
+        if game:GetService("Players").LocalPlayer.PlayerGui.MainUI.EquippedGlove.Visible == true then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = glovevalue.UIAnchor.CFrame * CFrame.new(90,0,0)
+wait(.1)
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space", false, game)
+wait(.1)
+game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space", false, game)
+else
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = glovevalue.UIAnchor.CFrame
+        wait(.1)
+        for glove = 1,hnumber do wait()
+        fireproximityprompt(glovevalue.UIAnchor.GlovePrompt,1)
+        end
+end
+end
+end
+end
+end)
+
 Section:NewToggle("Auto-Farm Trains", "ToggleInfo", function(state)
     _G.train = state
     
