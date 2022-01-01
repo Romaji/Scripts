@@ -12,7 +12,7 @@ end)
 Section:NewDropdown("Select Glove", "DropdownInf", Eggs, function(currentOption)
     Glovese = currentOption
 end)
-Section:NewToggle("AutoFarm Gloves", "ToggleInfo", function(state)
+Section:NewToggle("Auto-Farm Gloves", "ToggleInfo", function(state)
     _G.x = state
     
 while _G.x do wait(1)
@@ -36,7 +36,7 @@ end
 end
 end)
 
-Section:NewToggle("AutoFarm Gloves Long Range", "ToggleInfo", function(state)
+Section:NewToggle("Auto-Farm Gloves Long Range", "ToggleInfo", function(state)
     _G.GloveOther = state
     
 while _G.GloveOther do wait(1)
